@@ -1,5 +1,5 @@
 <script lang="ts">
-	import VGGRender from '../../dist/index.js';
+	import VGGRender, { EventType } from '../../dist/index.js';
 </script>
 
 <main>
@@ -13,7 +13,14 @@
 			<VGGRender
 				src="https://s3.vgg.cool/test/vgg.daruma"
 				runtime="https://s3.vgg.cool/test/runtime/latest"
-				canvasStyle="width: 50vw; height: 100vh"
+				canvasStyle="width: 100vw; height: 100vh"
+				onLoad={async (event, instance) => {
+					console.log('onLoad', event, instance);
+					instance?.$('#vgg_home').on(EventType.Click, async (_, { get, set }) => {
+						globalThis.alert('Hello, VGG!');
+						console.log(get, set);
+					});
+				}}
 			/>
 		</div>
 	</div>
