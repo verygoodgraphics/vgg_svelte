@@ -1,7 +1,7 @@
 {
 	"name": "@verygoodgraphics/vgg-svelte",
 	"homepage": "https://verygoodgraphics.com/",
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/verygoodgraphics/vgg_svelte.git"
@@ -59,6 +59,6 @@
 	"types": "./dist/index.d.ts",
 	"type": "module",
 	"dependencies": {
-		"@verygoodgraphics/vgg-wasm": "^0.0.16"
+		"@verygoodgraphics/vgg-wasm": "^0.0.18"
 	}
 }
