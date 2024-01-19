@@ -16,8 +16,8 @@
 				canvasStyle="width: 100vw; height: 100vh"
 				onLoad={async (event, instance) => {
 					console.log('onLoad', event, instance);
-					instance?.$('#vgg_home').on(EventType.Click, async (_, { get, set }) => {
-						globalThis.alert('Hello, VGG!');
+					instance.$('#vgg-btn-get-started').on(EventType.Click, async (_, { get, set }) => {
+						window.alert('Hello World from VGGRender Component!');
 						console.log(get, set);
 					});
 				}}
